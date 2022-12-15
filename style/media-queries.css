@@ -3,4 +3,9 @@
         margin: 126px auto 0;
     }
     
+    .movie{
+        max-width: 630px;
+        display: flex;
+        margin: 0 auto;
+    }
 }
