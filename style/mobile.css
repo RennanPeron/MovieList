@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+    margin: 50px auto 0;
+    padding: 0 8px;
+}
+
+.head {
+    margin: 30px 0;
+}
+
+.head img {
+    margin-bottom: 10px;
+}
+
+.find-movie button {
+    margin: 0 auto 26px;
+    background-color: #E9E6E3;
+    border: 2px solid #1A1A1A;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 14px 17px 16px;
+    color: #000000;
+}
+
+.find-movie img {
+    width: 36px;
+    margin-right: 17px;
+}
