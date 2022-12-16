@@ -2,10 +2,19 @@
     .container {
         margin: 126px auto 0;
     }
+
+    .find-movie {
+        margin-bottom: 100px;
+    }
     
     .movie{
         max-width: 630px;
         display: flex;
         margin: 0 auto;
     }
+
+    .movie-poster {
+        margin-right: 34px;
+    }
+
 }

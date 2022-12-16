@@ -12,6 +12,10 @@
     margin-bottom: 10px;
 }
 
+.find-movie {
+    margin-bottom: 50px;
+}
+
 .find-movie button {
     margin: 30px auto 26px;
     background-color: #E9E6E3;
@@ -21,6 +25,7 @@
     align-items: center;
     padding: 14px 17px 16px;
     color: #000000;
+    cursor: pointer;
 }
 
 .find-movie img {
@@ -31,9 +36,4 @@
 /* MOVIE STYLE */
 .movie-title {
     margin-bottom: 20px;
-
-}
-
-.movie-poster {
-    margin-right: 34px;
 }
