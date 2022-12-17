@@ -37,3 +37,7 @@
 .movie-title {
     margin-bottom: 20px;
 }
+
+.movie-poster img {
+    width: 170px;
+}
