@@ -7,9 +7,7 @@ function getMovie() {
 
         const movie = data[Math.floor(Math.random() * data.length)];
 
-        const elementMovie = document.querySelector('.movie')
- 
-        elementMovie.innerHTML = `
+        document.querySelector('.movie').innerHTML = `
         <div class="movie-poster">
             <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="Poster de ${movie.title}">
         </div>
@@ -19,8 +17,6 @@ function getMovie() {
             </p>
         </div>
         `
-
-        // elementMovie.className += " animation"
     })
     .catch(err => console.error(err))
 

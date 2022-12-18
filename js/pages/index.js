@@ -26,7 +26,6 @@ starting()
 
 document.querySelector('button').addEventListener("click", () => {
     const movie = document.querySelector('.movie')
-    const findMovie = document.querySelector('.find-movie')
 
     movie.style = `
         opacity: 0;
