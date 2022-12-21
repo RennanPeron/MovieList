@@ -45,3 +45,8 @@
 .movie, .find-movie {
     transition: all 0.5s;
 }
+
+.erro {
+    display: flex;
+    align-items: center;
+}
