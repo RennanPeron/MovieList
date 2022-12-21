@@ -1,5 +1,4 @@
-const url = "https://api.themoviedb.org/3/movie/popular?api_key=868efc014ce3520ee3980839712a65&language=pt-BR&page=1&region=US"
-// const url = "https://api.themoviedb.org/3/movie/popular?api_key=868e39fc014ce3520ee3980839712a65&language=pt-BR&page=1&region=US"
+const url = "https://api.themoviedb.org/3/movie/popular?api_key=868e39fc014ce3520ee3980839712a65&language=pt-BR&page=1&region=US"
 
 let ids = [
 ]
@@ -16,13 +15,13 @@ function getMovie() {
         if (ids.find(element => element == movie.id) === undefined) {
             ids.push(movie.id)
 
-            renderResults(movie)
             
             movieClass.style = `
             opacity: 0
             `
             
             setTimeout(() => {
+                renderResults(movie)
                 
                 movieClass.style = `
                 opacity: 1;
