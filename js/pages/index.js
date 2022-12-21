@@ -25,16 +25,5 @@ function starting() {
 starting()
 
 document.querySelector('button').addEventListener("click", () => {
-    const movie = document.querySelector('.movie')
-
-    movie.style = `
-        opacity: 0;
-    `
-    
-    setTimeout(() => {
-        getMovie()
-        movie.style = `
-        opacity: 1;
-        `
-    }, 500);
+    getMovie()
 })
