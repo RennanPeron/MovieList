@@ -1,7 +1,7 @@
 # MovieList
-<!-- ![preview](./.github/screenshot.png) -->
+![preview](img/MovieList.gif)
 
-O projeto é uma página que exibe um filme aleatório para quem procura um filme mas ainda não sabe o que assistir.
+O projeto é uma página que exibe filmes populares na plataforma para quem procura um filme mas ainda não sabe o que assistir.
 
 <!-- ## 🖥️ Demonstração
 Você pode conferir o projeto clicando [aqui](https://rennanperon.github.io/MovieList/). -->

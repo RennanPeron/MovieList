@@ -13,20 +13,27 @@ function getMovie() {
 
         
         if (ids.find(element => element == movie.id) === undefined) {
-            ids.push(movie.id)
-
-            
-            movieClass.style = `
-            opacity: 0
-            `
-            
-            setTimeout(() => {
+            if(ids.length === 0) {
                 renderResults(movie)
                 
                 movieClass.style = `
                 opacity: 1;
                 `
-            }, 500);
+            } else {
+                movieClass.style = `
+                opacity: 0
+                `
+
+                setTimeout(() => {
+                    renderResults(movie)
+                    
+                    movieClass.style = `
+                    opacity: 1;
+                    `
+                }, 500);
+            }
+            
+            ids.push(movie.id)
         }
         else {
             if (ids.length < 20){
@@ -37,30 +44,4 @@ function getMovie() {
     .catch(err => {
         renderError()
         console.error(err)})
-
-}
-
-function renderResults (movie) {
-    document.querySelector('.movie').innerHTML = `
-        <div class="movie-poster">
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="Poster de ${movie.title}">
-        </div>
-        <div class="movie-description">
-        <h2 class="movie-title">${movie.title}</h2>
-        <p class="movie-synopsis">${movie.overview}
-        </p>
-        </div>
-        `
-}
-
-function renderError () {
-    document.querySelector('.movie').innerHTML = `
-        <div class="movie-poster">
-            <img src="../img/erro.png" alt="Foi encontrado um erro :(">
-        </div>
-        <div class="movie-description erro">
-            <h2 class="movie-title">Ops, hoje não é dia de assistir filme.
-            Bora codar! 🚀</h2>
-        </div>
-        `
 }
