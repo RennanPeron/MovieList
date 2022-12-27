@@ -1,3 +1,4 @@
+/* COMEÇA O ESTILO DE INDEX */
 .container {
     text-align: center;
     margin: 50px auto 0;
@@ -49,4 +50,99 @@
 .erro {
     display: flex;
     align-items: center;
+}
+
+/* COMEÇA O ESTILO DE FAVORITES */
+html {
+    background-color: #0f0f0f;
+}
+/* CABEÇALHO */
+header {
+    height: 56px;
+    width: 100vw;
+    position: fixed;
+    background-color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box {
+    width: 580px;
+    height: 40px;
+    border-radius: 25px 0 0 25px;
+    padding-left: 16px;
+    background-color: #0f0f0f;
+    border: 1px solid #303030;
+    color: #fff;
+    z-index: 2;
+}
+
+.search-button {
+    border: 1px solid #303030;
+    background-color: #222222;
+    height: 40px;
+    width: 60px;
+    border-radius: 0 25px 25px 0;
+    z-index: 1;
+    background-image: url("../icons/search_FILL0_wght400_GRAD0_opsz48.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 60px 4px;
+    width: 64px;
+    height: 100vh;
+    text-align: center;
+}
+
+.favorites-container {
+    padding-top: 56px;
+    margin-left: 64px;
+    color: #fff;
+}
+
+.main, .open-list {
+    padding: 16px;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 500px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(15,15,15,0.9) 75%, rgba(15,15,15,1) 100%), url(https://scontent.fsdu6-1.fna.fbcdn.net/v/t1.6435-9/55485863_10157472280527275_7877149838259781632_n.jpg?stp=dst-jpg_p960x960&_nc_cat=111&ccb=1-7&_nc_sid=36a2c1&_nc_ohc=MzgRxN3Y6EgAX-cMCof&_nc_ht=scontent.fsdu6-1.fna&oh=00_AfC_g6tUeki05TlQdqfXGGaDv0egkTUnr0W_0CJfRZG-yg&oe=63D1AF51);
+    background-position: center;
+    background-size: cover;
+}
+
+.genre {
+    display: flex;
+}
+
+/* LISTAS */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-item {
+    width: 190px;
+    height: 290px;
+    margin-right: 12px;
+    background-image: url(https://img.elo7.com.br/product/zoom/26FCC69/poster-filme-vingadores-ultimato-avenger-endgame-cinema.jpg);
+    background-size: cover;
 }

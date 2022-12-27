@@ -1,4 +1,10 @@
 function starting() {
+    document.querySelector("html").style = `
+        background: linear-gradient(67.08deg, #1E46A3 0%, #000000 48.94%, #C12A23 99.97%) no-repeat;
+        min-height: 100vh;
+        color: #FFFCF9;
+    `
+
     document.querySelector("body").innerHTML = `
         <div class="container">
         <div class="head">
