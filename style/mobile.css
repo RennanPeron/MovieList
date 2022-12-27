@@ -97,6 +97,7 @@ header {
     background-size: 28px;
 }
 
+/* MENU LATERAL */
 aside {
     display: flex;
     flex-direction: column;
@@ -117,6 +118,22 @@ aside {
     padding: 16px;
 }
 
+ul {
+    color: #fff;
+    font-size: 10px
+}
+
+li {
+    margin-bottom: 8px;
+    padding: 18px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #222222;
+}
+
 /* MAIN */
 .main {
     display: flex;
@@ -133,6 +150,10 @@ aside {
     display: flex;
 }
 
+.genre p {
+    padding-right: 8px;
+}
+
 /* LISTAS */
 .list {
     display: flex;
@@ -143,6 +164,7 @@ aside {
     width: 190px;
     height: 290px;
     margin-right: 12px;
+    margin-bottom: 12px;
     background-image: url(https://img.elo7.com.br/product/zoom/26FCC69/poster-filme-vingadores-ultimato-avenger-endgame-cinema.jpg);
     background-size: cover;
 }

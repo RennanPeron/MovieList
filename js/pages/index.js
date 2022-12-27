@@ -1,4 +1,4 @@
-function starting() {
+function renderIndex() {
     document.querySelector("html").style = `
         background: linear-gradient(67.08deg, #1E46A3 0%, #000000 48.94%, #C12A23 99.97%) no-repeat;
         min-height: 100vh;
@@ -28,7 +28,6 @@ function starting() {
     `
 }
 
-starting()
 
 document.querySelector('button').addEventListener("click", () => {
     getMovie()
