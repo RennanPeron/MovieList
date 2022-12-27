@@ -16,7 +16,7 @@ function renderIndex() {
         <div class="movie" style="opacity: 0">
         </div>
         <div class="find-movie">
-            <button>
+            <button onclick="getMovie()">
                 <img src="img/logo.svg" alt="Logo">
                 Encontrar filme
             </button>
@@ -29,9 +29,9 @@ function renderIndex() {
 }
 
 
-document.querySelector('button').addEventListener("click", () => {
-    getMovie()
-})
+// document.querySelector('#selectMovie').addEventListener("click", () => {
+//     getMovie()
+// })
 
 
 function renderResults (movie) {

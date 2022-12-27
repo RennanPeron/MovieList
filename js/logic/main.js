@@ -10,7 +10,6 @@ function getMovie() {
         const movieClass = document.querySelector('.movie')
         
         const movie = data[Math.floor(Math.random() * data.length)];
-
         
         if (ids.find(element => element == movie.id) === undefined) {
             if(ids.length === 0) {

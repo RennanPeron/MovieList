@@ -64,23 +64,27 @@ header {
     background-color: #0f0f0f;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+header img {
+    display: block;
 }
 
 .search-bar {
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .search-box {
-    width: 580px;
+    width: 75vw;
     height: 40px;
     border-radius: 25px 0 0 25px;
     padding-left: 16px;
     background-color: #0f0f0f;
     border: 1px solid #303030;
     color: #fff;
+    font-size: 16px;
     z-index: 2;
 }
 
@@ -99,19 +103,22 @@ header {
 
 /* MENU LATERAL */
 aside {
-    display: flex;
-    flex-direction: column;
     position: fixed;
-    padding: 60px 4px;
-    width: 64px;
-    height: 100vh;
+    bottom: 0;
+    height: 56px;
+    width: 100vw;
+    background-color: #0f0f0f;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
 }
 
-.favorites-container {
-    padding-top: 56px;
-    margin-left: 64px;
-    color: #fff;
+.material-symbols-outlined {
+    display: block;
 }
 
 .main, .open-list {
@@ -124,8 +131,10 @@ ul {
 }
 
 li {
-    margin-bottom: 8px;
-    padding: 18px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
     border-radius: 12px;
     cursor: pointer;
 }
@@ -134,12 +143,24 @@ li:hover {
     background-color: #222222;
 }
 
+.active{
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 /* MAIN */
+.favorites-container {
+    color: #fff;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: 500px;
+    height: 350px;
     color: #fff;
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(15,15,15,0.9) 75%, rgba(15,15,15,1) 100%), url(https://scontent.fsdu6-1.fna.fbcdn.net/v/t1.6435-9/55485863_10157472280527275_7877149838259781632_n.jpg?stp=dst-jpg_p960x960&_nc_cat=111&ccb=1-7&_nc_sid=36a2c1&_nc_ohc=MzgRxN3Y6EgAX-cMCof&_nc_ht=scontent.fsdu6-1.fna&oh=00_AfC_g6tUeki05TlQdqfXGGaDv0egkTUnr0W_0CJfRZG-yg&oe=63D1AF51);
     background-position: center;
@@ -148,10 +169,15 @@ li:hover {
 
 .genre {
     display: flex;
+    margin: 8px 0;
 }
 
 .genre p {
     padding-right: 8px;
+}
+
+.synopsis {
+    display: none;
 }
 
 /* LISTAS */
