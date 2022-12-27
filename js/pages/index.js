@@ -37,12 +37,12 @@ function renderIndex() {
 function renderResults (movie) {
     document.querySelector('.movie').innerHTML = `
         <div class="movie-poster">
-        <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="Poster de ${movie.title}">
+            <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="Poster de ${movie.title}">
         </div>
         <div class="movie-description">
-        <h2 class="movie-title">${movie.title}</h2>
-        <p class="movie-synopsis">${movie.overview}
-        </p>
+            <h2 class="movie-title">${movie.title}</h2>
+            <p class="movie-synopsis">${movie.overview}</p>
+            <button onclick="renderFavorites()"> Seus favoritos </button>
         </div>
         `
 }
