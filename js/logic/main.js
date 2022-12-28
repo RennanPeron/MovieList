@@ -14,7 +14,7 @@ function getMovie() {
         if (ids.find(element => element == movie.id) === undefined) {
             if(ids.length === 0) {
                 renderResults(movie)
-                
+
                 movieClass.style = `
                 opacity: 1;
                 `
@@ -22,7 +22,7 @@ function getMovie() {
                 movieClass.style = `
                 opacity: 0
                 `
-
+                
                 setTimeout(() => {
                     renderResults(movie)
                     

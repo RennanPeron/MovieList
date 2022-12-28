@@ -16,7 +16,7 @@ function renderIndex() {
         <div class="movie" style="opacity: 0">
         </div>
         <div class="find-movie">
-            <button onclick="getMovie()">
+            <button class="button" onclick="getMovie()">
                 <img src="img/logo.svg" alt="Logo">
                 Encontrar filme
             </button>
@@ -42,9 +42,13 @@ function renderResults (movie) {
         <div class="movie-description">
             <h2 class="movie-title">${movie.title}</h2>
             <p class="movie-synopsis">${movie.overview}</p>
-            <button onclick="renderFavorites()"> Seus favoritos </button>
+            <div class="buttonList">
+                <button class="button"> ❤️ Favoritar! </button>
+                <button class="button"> 🚂 HYPE! </button>
+                <button class="button" onclick="renderFavorites()">Ver seus favoritos</button>
+            </div>
         </div>
-        `
+    `
 }
 
 function renderError () {
@@ -58,3 +62,5 @@ function renderError () {
         </div>
         `
 }
+
+renderIndex()

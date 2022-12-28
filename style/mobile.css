@@ -17,7 +17,7 @@
     margin-bottom: 50px;
 }
 
-.find-movie button {
+.button {
     margin: 30px auto 26px;
     background-color: #E9E6E3;
     border: 2px solid #1A1A1A;
@@ -107,7 +107,7 @@ aside {
     background-color: #0f0f0f;
 }
 
-aside ul {
+aside ul, .buttonList {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
