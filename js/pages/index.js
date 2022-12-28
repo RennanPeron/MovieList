@@ -28,12 +28,6 @@ function renderIndex() {
     `
 }
 
-
-// document.querySelector('#selectMovie').addEventListener("click", () => {
-//     getMovie()
-// })
-
-
 function renderResults (movie) {
     document.querySelector('.movie').innerHTML = `
         <div class="movie-poster">
