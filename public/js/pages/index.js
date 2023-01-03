@@ -37,7 +37,7 @@ function renderResults (movie) {
             <h2 class="movie-title">${movie.title}</h2>
             <p class="movie-synopsis">${movie.overview}</p>
             <div class="buttonList">
-                <button class="button"> ❤️ Favoritar! </button>
+                <button class="button" onclick="addNewMovie('favorites', ${movie.id}, '${movie.title}')"> ❤️ Favoritar! </button>
                 <button class="button"> 🚂 HYPE! </button>
                 <button class="button" onclick="renderFavorites()">Ver seus favoritos</button>
             </div>
