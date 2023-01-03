@@ -16,7 +16,7 @@ function renderIndex() {
         <div class="movie" style="opacity: 0">
         </div>
         <div class="find-movie">
-            <button class="button" onclick="getMovie()">
+            <button class="button findMovie">
                 <img src="img/logo.svg" alt="Logo">
                 Encontrar filme
             </button>
@@ -38,7 +38,7 @@ function renderResults (movie) {
             <p class="movie-synopsis">${movie.overview}</p>
             <div class="buttonList">
                 <button class="button" onclick="addNewMovie('favorites', ${movie.id}, '${movie.title}')"> ❤️ Favoritar! </button>
-                <button class="button"> 🚂 HYPE! </button>
+                <button class="button" onclick="addNewMovie('hype', ${movie.id}, '${movie.title}')"> 🚂 HYPE! </button>
                 <button class="button" onclick="renderFavorites()">Ver seus favoritos</button>
             </div>
         </div>
@@ -58,3 +58,7 @@ function renderError () {
 }
 
 renderIndex()
+
+document.querySelector(".findMovie").addEventListener('click', () => {
+    getMovie()
+})
