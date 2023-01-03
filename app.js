@@ -53,22 +53,32 @@ app.route('/api/hype/:id').get((req, res) => {
 
 
 app.route('/api/favorites/').post((req, res) => {
-    const list= data.favorites
+    const list = data.favorites
 
     list.push({
         id: req.body.id,
-        name: req.body.name
+        title: req.body.title,
+        overview: req.body.overview, 
+        backdrop_path: req.body.backdrop_path, 
+        poster_path: req.body.poster_path, 
+        release_date: req.body.release_date, 
+        vote_average: req.body.vote_average
     })
 
     res.json('Saved User')
 })
 
 app.route('/api/hype/').post((req, res) => {
-    const list= data.hype
+    const list = data.hype
 
     list.push({
         id: req.body.id,
-        name: req.body.name
+        title: req.body.title,
+        overview: req.body.overview, 
+        backdrop_path: req.body.backdrop_path, 
+        poster_path: req.body.poster_path, 
+        release_date: req.body.release_date, 
+        vote_average: req.body.vote_average
     })
 
     res.json('Saved User')

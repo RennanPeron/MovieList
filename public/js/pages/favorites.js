@@ -1,4 +1,16 @@
-function renderFavorites() {
+function constructPage() {
+    const baseURL = 'http://localhost:3000/api/favorites/'
+    
+    axios.get(baseURL)
+    .then(res => {
+        const data = res.data[0]
+
+        console.log(data)
+        renderFavorites(data)
+    })
+}
+
+function renderFavorites(movie) {
     document.querySelector("html").style = `
         background: #0f0f0f;
     `
@@ -18,16 +30,15 @@ function renderFavorites() {
         </ul>
     </aside>
     <div class="favorites-container">
-        <div class="main">
-            <div class="tile"><h2>Endgame</h2></div>
+        <div class="main" style="background-image: url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')">
+            <div class="tile"><h2>${movie.title}</h2></div>
             <div class="description">
-                <div class="genre">
-                    <p>Adventure/Action</p>
-                    <p>10/10</p>
-                    <p>2018</p>
+                <div class="informations">
+                    <p>${movie.vote_average}</p>
+                    <p>${movie.release_date}</p>
                 </div>
                 <div class="synopsis">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sequi fugiat impedit vitae molestias iusto ab recusandae vel omnis quasi libero a et nobis, obcaecati molestiae itaque repudiandae, doloribus voluptatum.
+                    ${movie.overview}
                 </div>
             </div>
         </div>
@@ -40,3 +51,5 @@ function renderFavorites() {
     </div>
     `
 }
+
+// constructPage()

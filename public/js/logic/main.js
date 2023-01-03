@@ -46,12 +46,12 @@ function getMovie() {
         console.error(err)})
     }
     
-    function addNewMovie(location, id, title) {
+    function addNewMovie(location, id, title, overview, backdrop_path, poster_path, release_date, vote_average) {
         const baseURL = `${api}${location}/`
         console.log('Entrei')
         console.log(baseURL)
         
-        axios.post(baseURL, {id: id, name: title})
+        axios.post(baseURL, {id: id, title: title, overview: overview, backdrop_path: backdrop_path, poster_path: poster_path, release_date: release_date, vote_average: vote_average})
         .then(res => {
             console.log(res.data)
         }).catch(err => console.log(err))

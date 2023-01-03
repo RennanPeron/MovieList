@@ -16,7 +16,7 @@ function renderIndex() {
         <div class="movie" style="opacity: 0">
         </div>
         <div class="find-movie">
-            <button class="button findMovie">
+            <button class="button" onClick="getMovie()">
                 <img src="img/logo.svg" alt="Logo">
                 Encontrar filme
             </button>
@@ -37,9 +37,9 @@ function renderResults (movie) {
             <h2 class="movie-title">${movie.title}</h2>
             <p class="movie-synopsis">${movie.overview}</p>
             <div class="buttonList">
-                <button class="button" onclick="addNewMovie('favorites', ${movie.id}, '${movie.title}')"> ❤️ Favoritar! </button>
-                <button class="button" onclick="addNewMovie('hype', ${movie.id}, '${movie.title}')"> 🚂 HYPE! </button>
-                <button class="button" onclick="renderFavorites()">Ver seus favoritos</button>
+                <button class="button" onclick="addNewMovie('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> ❤️ Favoritar! </button>
+                <button class="button" onclick="addNewMovie('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 HYPE! </button>
+                <button class="button" onclick="constructPage()">Ver seus favoritos</button>
             </div>
         </div>
     `
@@ -58,7 +58,3 @@ function renderError () {
 }
 
 renderIndex()
-
-document.querySelector(".findMovie").addEventListener('click', () => {
-    getMovie()
-})

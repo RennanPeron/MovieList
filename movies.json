@@ -1,22 +1,16 @@
 {
     "favorites": [
-        {
-          "id": 1049233,
-          "name": "Plano de Aula"
-        },
-        {
-          "id": 676547,
-          "name": "A Luz do Demônio"
-        },
-        {
-          "id": 555604,
-          "name": "Pinóquio por Guillermo Del Toro"
-        }
-      ],
+      
+    ],
     "hype": [
-    {
-        "id": 1024546,
-        "name": "Detective Knight: Rogue"
-    }
+      {
+        "id": "436270",
+        "title": "Adão Negro",
+        "overview": "Quase 5.000 anos depois de ter sido concedido com os poderes onipotentes dos deuses egípcios - e de ter sido preso, - Adão Negro se ergue de seu túmulo, pronto para trazer sua justiça ao mundo moderno.",
+        "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+        "poster_path": "/9z256FFPDsL7kSVJ9oyLELaN1ph.jpg",
+        "release_date": "2022-10-21",
+        "vote_average": "7.2"
+      }
     ]
 }
