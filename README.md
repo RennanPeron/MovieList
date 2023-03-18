@@ -1,5 +1,5 @@
 # MovieList
-![preview](img/MovieList.gif)
+![preview](public/img/MovieList.gif)
 
 O projeto é uma página que exibe filmes populares na plataforma para quem procura um filme mas ainda não sabe o que assistir.
 
