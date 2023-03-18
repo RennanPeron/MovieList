@@ -149,6 +149,11 @@ li:hover {
 }
 
 /* MAIN */
+.no-movies {
+    text-align: center;
+    margin-top: 64px;
+}
+
 .favorites-container {
     color: #fff;
 }

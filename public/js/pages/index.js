@@ -29,6 +29,7 @@ function renderIndex() {
 }
 
 function renderResults (movie) {
+    // POSSÍVEL ERRO: QUANDO TIVER UMA -> ' <- NO TITULO OU NA DESCRIÇÃO, SALVAR SÓ O ID E FAZER UMA CHAMADA AO TMDB BUSCANDO AS INFORMAÇÕES CORRIGIRIA ISSO
     document.querySelector('.movie').innerHTML = `
         <div class="movie-poster">
             <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="Poster de ${movie.title}">
@@ -39,7 +40,7 @@ function renderResults (movie) {
             <div class="buttonList">
                 <button class="button" onclick="addNewMovie('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> ❤️ Favoritar! </button>
                 <button class="button" onclick="addNewMovie('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 HYPE! </button>
-                <button class="button" onclick="constructPage()">Ver seus favoritos</button>
+                <button class="button" onclick="loadFavorites()">Ver seus favoritos</button>
             </div>
         </div>
     `
