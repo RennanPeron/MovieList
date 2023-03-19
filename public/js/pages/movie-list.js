@@ -23,7 +23,7 @@ function constructPage(baseURL, pageType) {
             renderEmptyMovieList()
         } else {
             console.log("Lista Preenchida!");
-            renderMainFavorite(data[0])
+            renderMainSection(data[0], pageType)
        }
 
         data.forEach((data) => {
@@ -66,22 +66,24 @@ function renderEmptyMovieList() {
     `
 }
 
-function renderMainFavorite(movie) {
+function renderMainSection(movie, pageType) {
     document.querySelector(".favorites-container").innerHTML = `
     <div class="main" style="background-image: url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')">
-        <div class="tile"><h2>${movie.title}</h2></div>
-        <div class="description">
-            <div class="informations">
-                <p>${movie.vote_average}</p>
-                <p>${movie.release_date}</p>
-            </div>
-            <div class="synopsis">
-                ${movie.overview}
+        <div class="movie-info">
+            <div class="tile"><h2>${movie.title}</h2></div>
+            <div class="description">
+                <div class="informations">
+                    <p>${movie.vote_average} <span class="material-symbols-outlined active" style="font-size: 15px">star</span></p> 
+                    <p>${movie.release_date}</p>
+                </div>
+                <div class="synopsis">
+                    ${movie.overview}
+                </div>
             </div>
         </div>
     </div>
     <div class="open-list">
-        <h3>Seus favoritos</h3>
+        <h3>${pageType=="favorites"? "Seus favoritos": "Os mais aguardados"}</h3>
         <div class="list"></div>
     </div>
     `

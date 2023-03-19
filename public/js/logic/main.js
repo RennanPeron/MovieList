@@ -1,5 +1,7 @@
-const url = "https://api.themoviedb.org/3/movie/popular?api_key=868e39fc014ce3520ee3980839712a65&language=pt-BR&page=1&region=US"
+const url = "https://api.themoviedb.org/3/movie/top_rated?api_key=868e39fc014ce3520ee3980839712a65&language=pt-BR&page=1&region=US&primary_release_year=2023&primary_release_year=2022&sort_by=vote_average.desc"
 const api = "http://localhost:3000/api/"
+
+// Depois posso adicionar uma condição em que se chegar a 20 filmes, reseta a lista e avança para a página 2.
 
 let ids = [
 ]
@@ -44,12 +46,32 @@ function getMovie() {
         renderError()
         console.error(err)})
     }
-    
-    function addNewMovie(location, id, title, overview, backdrop_path, poster_path, release_date, vote_average) {
+
+    function checkMovieList(location, id, title, overview, backdrop_path, poster_path, release_date, vote_average) {
         const baseURL = `${api}${location}/`
-        console.log('Entrei')
-        console.log(baseURL)
-        
+
+        let isOnTheList = false;
+
+        axios.get(baseURL)
+        .then(res => {
+            const movies = res.data
+            let isOnTheList = false
+            console.log('Checando se o filme já está na lista')
+            movies.forEach((movie) => {
+                if(movie.id == id){
+                    isOnTheList = true
+                }
+            });
+            if(isOnTheList){
+                console.log("Já existe na lista!");
+            } else {
+                console.log("Não tá na lista!")
+                addNewMovie(location, id, title, overview, backdrop_path, poster_path, release_date, vote_average, baseURL)
+            }
+        })
+    }
+    
+    function addNewMovie(location, id, title, overview, backdrop_path, poster_path, release_date, vote_average, baseURL) {
         axios.post(baseURL, {id: id, title: title, overview: overview, backdrop_path: backdrop_path, poster_path: poster_path, release_date: release_date, vote_average: vote_average})
         .then(res => {
             console.log(res.data)

@@ -38,8 +38,8 @@ function renderResults (movie) {
             <h2 class="movie-title">${movie.title}</h2>
             <p class="movie-synopsis">${movie.overview}</p>
             <div class="buttonList">
-                <button class="button" onclick="addNewMovie('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> ❤️ Favoritar! </button>
-                <button class="button" onclick="addNewMovie('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 HYPE! </button>
+                <button class="button" onclick="checkMovieList('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> ❤️ Favoritar! </button>
+                <button class="button" onclick="checkMovieList('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 HYPE! </button>
                 <button class="button" onclick="loadFavorites()">Ver seus favoritos</button>
             </div>
         </div>
