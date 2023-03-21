@@ -96,5 +96,3 @@ function renderFavorites(movie) {
         </div>
     `
 }
-
-// constructPage()
