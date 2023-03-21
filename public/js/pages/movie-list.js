@@ -1,8 +1,8 @@
 function loadFavorites() {
     const baseURL = 'http://localhost:3000/api/favorites/'
-    const pageType = "favorites"
+    const currentPage = "favorites"
     
-    constructPage(baseURL, pageType)
+    constructPage(baseURL, currentPage)
 }
 function loadHype() {
     const baseURL = 'http://localhost:3000/api/hype/'
