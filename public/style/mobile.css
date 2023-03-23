@@ -1,10 +1,4 @@
 /* COMEÇA O ESTILO DE INDEX */
-.container {
-    text-align: center;
-    margin: 50px auto 0;
-    padding: 0 8px;
-}
-
 .head {
     margin: 30px 0;
 }
@@ -15,56 +9,6 @@
 
 .find-movie {
     margin-bottom: 50px;
-}
-
-.button {
-    position: relative;
-    background-color: #fff;
-    color: #000;
-    user-select: none;
-    cursor: pointer;
-    margin: 30px auto 26px;
-    border: 2px solid #1A1A1A;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 14px 17px 16px;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-}
-
-.button:hover {
-    transition-duration: 0.1s;
-    background-color: #d9d5d2;
-}
-
-.button:after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 5px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.5s;
-    box-shadow: 0 0 10px 40px white;
-}
-
-.button:active:after {
-    box-shadow: 0 0 0 0 white;
-    position: absolute;
-    border-radius: 5px;
-    left: 0;
-    top: 0;
-    opacity: 1;
-    transition: 0s;
-}
-
-.button:active {
-    top: 1px;
 }
 
 .find-movie img {
@@ -93,67 +37,15 @@
 
 /* COMEÇA O ESTILO DE FAVORITES */
 /* CABEÇALHO */
-header {
-    height: 56px;
-    width: 100vw;
-    position: fixed;
-    background-color: #0f0f0f;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-}
-
 header img {
-    display: block;
+    display: none;
 }
 
 .search-bar {
     display: flex;
 }
 
-.search-box {
-    width: 75vw;
-    height: 40px;
-    border-radius: 25px 0 0 25px;
-    padding-left: 16px;
-    background-color: #0f0f0f;
-    border: 1px solid #303030;
-    color: #fff;
-    font-size: 16px;
-    z-index: 2;
-}
-
-.search-button {
-    border: 1px solid #303030;
-    background-color: #222222;
-    height: 40px;
-    width: 60px;
-    border-radius: 0 25px 25px 0;
-    z-index: 1;
-    background-image: url("../icons/search_FILL0_wght400_GRAD0_opsz48.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 28px;
-}
-
 /* MENU LATERAL */
-aside {
-    position: fixed;
-    bottom: 0;
-    height: 56px;
-    width: 100vw;
-    background-color: #0f0f0f;
-}
-
-aside ul,
-.buttonList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-}
-
 li .material-symbols-outlined {
     display: block;
 }
@@ -161,28 +53,6 @@ li .material-symbols-outlined {
 .main,
 .open-list {
     padding: 16px;
-}
-
-ul {
-    color: #fff;
-    font-size: 10px;
-}
-
-li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-li:hover {
-    background-color: #222222;
-}
-
-.active {
-    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /* MAIN */
@@ -197,35 +67,7 @@ li:hover {
     background: rgb(255, 255, 255);
     background: linear-gradient(180deg,
             rgba(255, 255, 255, 0) 0%,
-            rgba(15, 15, 15, 1) 25%);
-}
-
-.favorites-container {
-    color: #fff;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    height: 350px;
-    color: #fff;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(15, 15, 15, 0.9) 75%,
-            rgba(15, 15, 15, 1) 100%);
-    background-position: center;
-    background-size: cover;
-    padding: 0;
-}
-
-.genre {
-    display: flex;
-    margin: 8px 0;
-}
-
-.genre p {
-    padding-right: 8px;
+            rgba(15, 15, 15, 1) 50%);
 }
 
 .synopsis {
@@ -236,13 +78,4 @@ li:hover {
 .list {
     display: flex;
     flex-wrap: wrap;
-}
-
-.list-item {
-    width: 190px;
-    height: 290px;
-    margin-right: 12px;
-    margin-bottom: 12px;
-    background-image: url(https://img.elo7.com.br/product/zoom/26FCC69/poster-filme-vingadores-ultimato-avenger-endgame-cinema.jpg);
-    background-size: cover;
 }
