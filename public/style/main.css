@@ -101,6 +101,56 @@ header {
     padding: 0 8px;
 }
 
+.search-container, .search-field {
+    display: flex;
+}
+
+.search-container {
+    align-items: center;
+    justify-content: center;    
+}
+
+.search-list {
+    position: absolute;
+    top: 50px;
+    background-color: #fff;
+    border: 1px solid #898989;
+    border-radius: 12px;
+    width: 580px;
+    height: 228px;  /* altura de 3 filmes */
+    height: 228px; 
+    overflow-y: scroll;
+}
+
+.search-list::-webkit-scrollbar {
+    width: 8px;
+}
+.serach-list::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 12px;
+    outline: none;
+}
+.search-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+}
+
+.search-list-item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    margin: 8px 0;
+}
+
+.search-list-item:hover {
+    background-color: #cfcfcf;
+}
+
+.search-thumbnail img {
+    width: 40px;
+    margin-right: 8px;
+}
+
+
 .search-box {
     width: 75vw;
     height: 40px;

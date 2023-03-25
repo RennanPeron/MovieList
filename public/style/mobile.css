@@ -37,13 +37,10 @@
 
 /* COMEÇA O ESTILO DE FAVORITES */
 /* CABEÇALHO */
-header img {
+/* header img {
     display: none;
-}
+} */
 
-.search-bar {
-    display: flex;
-}
 
 /* MENU LATERAL */
 li .material-symbols-outlined {

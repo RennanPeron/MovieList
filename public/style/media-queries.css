@@ -6,9 +6,9 @@
 }
 
 @media (min-width: 768px) { 
-    header img {
+    /* header img {
         display: none;
-    }
+    } */
 
     .container {
         margin: 126px auto 0;
