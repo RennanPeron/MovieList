@@ -45,13 +45,13 @@ function renderPage(pageType) {
             <button class="search-button"></button>
         </div>
     </header>
-    <aside>
+    <nav>
         <ul>
             <li onclick="loadFavorites()"> <span class="material-symbols-outlined ${pageType=="favorites"? "active": ""}">favorite</span> Favoritos </li>
             <li onclick="loadHype()"> <span class="material-symbols-outlined ${pageType=="hype"? "active": ""}">star</span> Hype </li>
             <li onclick="renderIndex()"> <img class="material-symbols-outlined" style="width: 24px;" src="img/logo.svg" alt="Aleatório"> Aleatório </li>
         </ul>
-    </aside>
+    </nav>
     <div class="favorites-container">
     </div>
     `
@@ -68,7 +68,7 @@ function renderEmptyMovieList() {
 
 function renderMainSection(movie, pageType) {
     document.querySelector(".favorites-container").innerHTML = `
-    <div class="main" style="background-image: url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')">
+    <main style="background-image: url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')">
         <div class="movie-info">
             <div class="tile"><h2>${movie.title}</h2></div>
             <div class="description">
@@ -81,11 +81,11 @@ function renderMainSection(movie, pageType) {
                 </div>
             </div>
         </div>
-    </div>
-    <div class="open-list">
+    </main>
+    <section class="open-list">
         <h3>${pageType=="favorites"? "Seus favoritos": "Os mais aguardados"}</h3>
         <div class="list"></div>
-    </div>
+    </section>
     `
 }
 

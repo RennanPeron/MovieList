@@ -127,7 +127,7 @@ header {
 }
 
 /* MENU LATERAL */
-aside {
+nav {
     position: fixed;
     bottom: 0;
     height: 56px;
@@ -135,7 +135,7 @@ aside {
     background-color: #0f0f0f;
 }
 
-aside ul,
+nav ul,
 .buttonList {
     display: flex;
     flex-direction: row;
@@ -169,7 +169,7 @@ li:hover {
     color: #fff;
 }
 
-.main {
+main {
     display: flex;
     flex-direction: column;
     justify-content: end;

@@ -47,8 +47,8 @@
         font-size: 16px;
         z-index: 2;
     }
-    /* aside style */
-    aside {
+    /* nav style */
+    nav {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -58,7 +58,7 @@
         text-align: center;
     }
 
-    aside ul {
+    nav ul {
         display: block
     }
 
@@ -74,7 +74,7 @@
         color: #fff;
     }
 
-    .main {
+    main {
         height: 500px;
     }
     
