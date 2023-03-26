@@ -39,13 +39,13 @@ function renderPage(pageType) {
 
     document.querySelector("body").innerHTML = `
     <header>
-        <img src="icons/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" style="height: 40px" alt="Voltar">
         <div class="search-container">
             <div class="search-field">
-                
+                <input onfocus="activateSearchList()" onblur="activateSearchList()" class="search-box" type="text" placeholder="Procure por um filme ou série..." onkeyup="getMovieByName()">
+                <button class="search-button"></button>
+                <div class="search-list onFocus">
+                </div>
             </div>
-            <input class="search-box" type="text" placeholder="Procure por um filme ou série...">
-            <button class="search-button"></button>
         </div>
     </header>
     <nav>

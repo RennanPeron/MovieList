@@ -2,7 +2,6 @@ const url = "https://api.themoviedb.org/3/movie/top_rated?api_key=868e39fc014ce3
 const api = "http://localhost:3000/api/"
 
 // Depois posso adicionar uma condição em que se chegar a 20 filmes, reseta a lista e avança para a página 2.
-
 let ids = [
 ]
 
