@@ -125,9 +125,10 @@ header {
 .search-list::-webkit-scrollbar {
     width: 8px;
 }
-.serach-list::-webkit-scrollbar-thumb {
-    background: red;
+.search-list::-webkit-scrollbar-thumb {
+    background-color: #898989;
     border-radius: 12px;
+    width: 12px;
     outline: none;
 }
 .search-list::-webkit-scrollbar-track {
