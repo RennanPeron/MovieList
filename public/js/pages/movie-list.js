@@ -41,7 +41,7 @@ function renderPage(pageType) {
     <header>
         <div class="search-container">
             <div class="search-field">
-                <input onfocus="activateSearchList()" onblur="activateSearchList()" class="search-box" type="text" placeholder="Procure por um filme ou série..." onkeyup="getMovieByName()">
+                <input onfocus="getMovieByName()" onblur="deactivateSearchList()" class="search-box" type="text" placeholder="Procure por um filme ou série..." onkeyup="getMovieByName()">
                 <button class="search-button"></button>
                 <div class="search-list onFocus">
                 </div>
@@ -70,6 +70,7 @@ function renderEmptyMovieList() {
 }
 
 function renderMainSection(movie, pageType) {
+    let movieYear = movie.release_date.split("-")[0]
     document.querySelector(".favorites-container").innerHTML = `
     <main style="background-image: url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')">
         <div class="movie-info">
@@ -77,7 +78,7 @@ function renderMainSection(movie, pageType) {
             <div class="description">
                 <div class="informations">
                     <p>${movie.vote_average} <span class="material-symbols-outlined active" style="font-size: 15px">star</span></p> 
-                    <p>${movie.release_date}</p>
+                    <p>${movieYear}</p>
                 </div>
                 <div class="synopsis">
                     ${movie.overview}
