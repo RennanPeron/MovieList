@@ -23,7 +23,7 @@ function getMovieByName(){
                         <div class="search-content">
                             <p>${movieYear}</p>
                             <div class="search-buttons">
-                                <button onclick="checkMovieList('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}'), loadFavorites()"> ❤️ </button>
+                                <button onclick="checkMovieList('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> ❤️ </button>
                                 <button onclick="checkMovieList('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 </button>
                             </div>
                         </div>
