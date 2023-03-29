@@ -1,5 +1,5 @@
 # MovieList
-![preview](public/img/MovieList.gif)
+![preview](public/img/MovieListGif.gif)
 
 O projeto é uma página que exibe filmes populares na plataforma para quem procura um filme mas ainda não sabe o que assistir. Além disso, a aplicação também permite aos usuários adicionar filmes para as listas de favoritos e mais aguardados, e visualizá-los em uma segunda página. A aplicação é uma SPA (Single Page Application) criada usando somente JavaScript, com CSS para a estilização.
 
