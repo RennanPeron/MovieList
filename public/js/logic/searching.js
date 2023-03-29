@@ -20,7 +20,13 @@ function getMovieByName(){
                     </div>
                     <div class="search-info">
                         <h3>${movie.title}</h3>
-                        <p>${movieYear}</p>
+                        <div class="search-content">
+                            <p>${movieYear}</p>
+                            <div class="search-buttons">
+                                <button onclick="checkMovieList('favorites',  '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}'), loadFavorites()"> ❤️ </button>
+                                <button onclick="checkMovieList('hype', '${movie.id}', '${movie.title}', '${movie.overview}', '${movie.backdrop_path}', '${movie.poster_path}', '${movie.release_date}', '${movie.vote_average}')"> 🚂 </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 `
@@ -33,10 +39,8 @@ function getMovieByName(){
 
 function deactivateSearchList() {
     const searchList = document.querySelector(".search-list")
-    const movieName = document.querySelector('input').value
-    
-    searchList.classList.add('onFocus')
-    // if(movieName != "") {
-
-    // }  
+    let timer = 3000;
+    setTimeout(()=> {
+        searchList.classList.add('onFocus')
+    }, timer)
 }
